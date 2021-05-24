@@ -1,12 +1,27 @@
+require 'asciiart'
+require 'colorize'
+require 'tty-prompt'
+require 'date'
+require 'espeak'
+
+
 require_relative './boarding.rb'
 # Greeting message
-puts "Hi,welcom to my Deluxe Dog Boarding Home"
+puts "Hi,welcom to my Deluxy Dog Boarding Home"
 
 # get dogs name
-def dog_name
-   puts "What is your dog's name?"
-   name = gets.chomp
-   print ">"
+def run
+    @name = dog_name("What is your dog's name?")
+    BookingDetail.new.booking
+end
+def dog_name(data)
+    puts data
+    @name = gets.chomp.strip
+    if @name.to_s.empty?
+        dog_name("What is your dog's name?")
+    end
+    print ">"
+    return @name.colorize(:color => :red)
 end
 
 # Ask if customer want a booking or not
