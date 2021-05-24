@@ -8,7 +8,7 @@ require 'espeak'
 require_relative './boarding.rb'
 # Greeting message
 puts "Hi,welcom to my Deluxy Dog Boarding Home"
-
+# speech = ESpeak::Speech.new("welcome to this system!")
 # get dogs name
 def run
     @name = dog_name("What is your dog's name?")
@@ -26,7 +26,7 @@ end
 
 # Ask if customer want a booking or not
 def booking
-  puts "Do you want book a dog boarding(寄养) position?"
+  puts "Do you want book a dog boarding position?"
   puts "1: Yes. I want to book a position."
   puts "2: No. Just want to view some information."
   puts "3: Exit"
@@ -43,9 +43,9 @@ case gets.to_i
 when 1
    puts "Choose a boarding style:"
    # style_choose(Open Air Staying,23)
-   puts "1: Open Air Staying（室外）."
+   puts "1: Open Air Staying."
    puts "    Price:$23/day"
-   puts "2: Deluxe Indoor Stay（室内）."
+   puts "2: Deluxe Indoor Stay."
    puts "    Price:$30/day"
    puts "3: Go back to the main page"
     board_method = gets.chomp
