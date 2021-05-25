@@ -13,7 +13,8 @@ class BookingDetail
         case gets.to_i
         when 1
             menu = ["1: Open Air Staying. Price:$23/day","2: Deluxe Indoor Stay. Price:$30/day"]
-           
+            selection = TTY::Prompt.new.select("Choose a room type:", menu, cycle: true, marker: '>', echo: false)
+            puts selection.colorize(:color => :red)
            
             index = 0
             menu.each_with_index do |m,i|
