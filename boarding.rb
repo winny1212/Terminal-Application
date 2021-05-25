@@ -8,8 +8,8 @@ require 'espeak'
 require_relative './boarding.rb'
 # Greeting message
 puts "Hi,welcom to my Deluxy Dog Boarding Home"
-# speech = ESpeak::Speech.new("welcome to this system!")
-# get dogs name
+speech = ESpeak::Speech.new("welcome to this system!")
+get dogs name
 def run
     @name = dog_name("What is your dog's name?")
     BookingDetail.new.booking
