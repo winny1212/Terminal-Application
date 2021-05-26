@@ -1,3 +1,6 @@
+require "colorize"
+
+
 def greeting
     speech = ESpeak::Speech.new("welcome to this system!")
     speech.speak
@@ -28,3 +31,14 @@ def wait_clear(time)
     sleep(time)
     system "clear"
 end
+
+
+
+def output(collection)
+    collection.each do |data|
+        sleep(0.5)
+        puts data.colorize(:blue)
+    end
+end
+
+

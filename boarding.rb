@@ -22,10 +22,12 @@ when 1
         puts
         features_outdoor = ["  *Open Air kennels","  *Two meals per day","  *Play time with doggy friends","  *Jackets may be required depending on weather conditions, can be hired at time of check-in","  *Outdoor toys"]
         
-        features_outdoor.each do |data|
-                sleep(0.5)
-                puts data
-        end
+        output(features_outdoor)
+        
+      #   .each do |data|
+      #           sleep(0.5)
+      #           puts data
+      #   end
         new_pet.board_date
         new_pet.leave_phone
         new_pet.leave_email
@@ -34,10 +36,7 @@ when 1
         puts "Indoor Features"
         puts
         feature_indoor = ["  *State of the art luxury boarding experience","  *Heated and airconditioned kennel","  *Two meals per day", "  *Doggy play sessions (depending on energy and temperament","  *Access to our veterinary service"]
-        feature_indoor.each do |data|
-            sleep(0.5)
-            puts data
-        end
+        output(features_iutdoor)
         new_pet.board_date
         new_pet.leave_phone
         new_pet.leave_email
