@@ -13,6 +13,7 @@ class Pet
         @name = gets.chomp
         print "> "
         puts name.colorize(:color => :red)
+        
     end
 
     def board_date
