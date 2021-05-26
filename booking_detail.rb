@@ -12,9 +12,11 @@ class Pet
         puts "What is your dog's name?"
         @name = gets.chomp.capitalize
         print "> "
-        puts name.colorize(:color => :red)   
+        puts name.colorize(:color => :red)
+        if @name.to_s.empty?
+            puts "Ooops,please enter your dog's name:"
+        end   
     end
-
     def board_date
         puts "please enter the start day here(yyyy-mm-dd):"
         

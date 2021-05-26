@@ -6,11 +6,25 @@ GEM
       rmagick (= 2.13.4)
     colorize (0.8.1)
     date (3.1.1)
+    diff-lcs (1.4.4)
     espeak-ruby (1.0.4)
     pastel (0.8.0)
       tty-color (~> 0.5)
     rainbow (2.0.0)
     rmagick (2.13.4)
+    rspec (3.10.0)
+      rspec-core (~> 3.10.0)
+      rspec-expectations (~> 3.10.0)
+      rspec-mocks (~> 3.10.0)
+    rspec-core (3.10.1)
+      rspec-support (~> 3.10.0)
+    rspec-expectations (3.10.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.10.0)
+    rspec-mocks (3.10.2)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.10.0)
+    rspec-support (3.10.2)
     tty-color (0.6.0)
     tty-cursor (0.7.1)
     tty-prompt (0.23.1)
@@ -31,6 +45,7 @@ DEPENDENCIES
   colorize (~> 0.8.1)
   date
   espeak-ruby (~> 1.0)
+  rspec
   tty-prompt
 
 BUNDLED WITH
