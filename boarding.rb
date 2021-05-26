@@ -1,5 +1,7 @@
 require_relative "booking_detail"
 require_relative "board_style"
+require_relative "command_line_args"
+
 
 require 'colorize'
 require 'tty-prompt'
@@ -18,23 +20,19 @@ when 1
     features = ["1: Open Air Staying. Price:$23/day","2: Deluxe Indoor Stay. Price:$30/day", "3: Go back to memu"]
     selection = TTY::Prompt.new.select("Choose a room type:", features, cycle: true, marker: '>', echo: false)
     if selection == "1: Open Air Staying. Price:$23/day"
-        puts "Outdoor Features"
         puts
+        puts "Outdoor Features"
         features_outdoor = ["  *Open Air kennels","  *Two meals per day","  *Play time with doggy friends","  *Jackets may be required depending on weather conditions, can be hired at time of check-in","  *Outdoor toys"]
         
         output(features_outdoor)
-        
-      #   .each do |data|
-      #           sleep(0.5)
-      #           puts data
-      #   end
         new_pet.board_date
         new_pet.leave_phone
         new_pet.leave_email
         new_pet.confirmation
     elsif selection == "2: Deluxe Indoor Stay. Price:$30/day"
-        puts "Indoor Features"
         puts
+        puts "Indoor Features"
+        
         feature_indoor = ["  *State of the art luxury boarding experience","  *Heated and airconditioned kennel","  *Two meals per day", "  *Doggy play sessions (depending on energy and temperament","  *Access to our veterinary service"]
         output(features_iutdoor)
         new_pet.board_date

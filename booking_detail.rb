@@ -10,10 +10,9 @@ class Pet
 
     def run
         puts "What is your dog's name?"
-        @name = gets.chomp
+        @name = gets.chomp.capitalize
         print "> "
-        puts name.colorize(:color => :red)
-        
+        puts name.colorize(:color => :red)   
     end
 
     def board_date
